@@ -89,13 +89,43 @@ func TestIntegration(t *testing.T) {
 		},
 		{
 			Name:    "enable rule which has required configuration by CLI options",
-			Command: "./tflint --format json --enable-rule required_config",
+			Command: "./tflint --format json --enable-rule aws_s3_bucket_with_config_example",
 			Dir:     "enable-required-config-rule-by-cli",
 		},
 		{
 			Name:    "heredoc",
 			Command: "./tflint --format json",
 			Dir:     "heredoc",
+		},
+		{
+			Name:    "rule config",
+			Command: "./tflint --format json",
+			Dir:     "rule-config",
+		},
+		{
+			Name:    "disabled rules",
+			Command: "./tflint --format json",
+			Dir:     "disabled-rules",
+		},
+		{
+			Name:    "cty-based eval",
+			Command: "./tflint --format json",
+			Dir:     "cty-based-eval",
+		},
+		{
+			Name:    "map attribute eval",
+			Command: "./tflint --format json",
+			Dir:     "map-attribute",
+		},
+		{
+			Name:    "rule config with --enable-rule",
+			Command: "tflint --enable-rule aws_s3_bucket_with_config_example --format json",
+			Dir:     "rule-config",
+		},
+		{
+			Name:    "rule config with --only",
+			Command: "tflint --only aws_s3_bucket_with_config_example --format json",
+			Dir:     "rule-config",
 		},
 	}
 
