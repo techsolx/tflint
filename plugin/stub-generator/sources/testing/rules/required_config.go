@@ -5,7 +5,9 @@ import (
 )
 
 // RequredConfigRule checks whether ...
-type RequredConfigRule struct{}
+type RequredConfigRule struct {
+	tflint.DefaultRule
+}
 
 type ruleConfig struct {
 	Options []string `hcl:"options"`

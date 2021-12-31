@@ -8,7 +8,6 @@ import (
 	"github.com/terraform-linters/tflint-ruleset-aws/aws"
 	"github.com/terraform-linters/tflint-ruleset-aws/project"
 	"github.com/terraform-linters/tflint-ruleset-aws/rules"
-	"github.com/terraform-linters/tflint-ruleset-aws/rules/api"
 )
 
 func (cli *CLI) actAsAwsPlugin() int {
@@ -19,7 +18,6 @@ func (cli *CLI) actAsAwsPlugin() int {
 				Version: fmt.Sprintf("%s-bundled", project.Version),
 				Rules:   rules.Rules,
 			},
-			APIRules: api.Rules,
 		},
 	})
 
