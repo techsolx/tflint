@@ -29,7 +29,7 @@ func (r *RequredConfigRule) Enabled() bool {
 }
 
 // Severity returns the rule severity
-func (r *RequredConfigRule) Severity() string {
+func (r *RequredConfigRule) Severity() tflint.Severity {
 	return tflint.ERROR
 }
 
